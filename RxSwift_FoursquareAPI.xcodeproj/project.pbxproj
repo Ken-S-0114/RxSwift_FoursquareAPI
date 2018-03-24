@@ -17,6 +17,7 @@
 		B21153FD2066B06F0010FADA /* VenueAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21153FC2066B06F0010FADA /* VenueAPIClient.swift */; };
 		B21153FF2066BBF60010FADA /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21153FE2066BBF60010FADA /* Result.swift */; };
 		B21154012066BD390010FADA /* VenueRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21154002066BD390010FADA /* VenueRequest.swift */; };
+		B21154062066CA470010FADA /* VenueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21154052066CA470010FADA /* VenueViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		B21153FC2066B06F0010FADA /* VenueAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueAPIClient.swift; sourceTree = "<group>"; };
 		B21153FE2066BBF60010FADA /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		B21154002066BD390010FADA /* VenueRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueRequest.swift; sourceTree = "<group>"; };
+		B21154052066CA470010FADA /* VenueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueViewModel.swift; sourceTree = "<group>"; };
 		B61D2F7DECB2EBA76D0DA5EA /* Pods_RxSwift_FoursquareAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwift_FoursquareAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F58039E121081E306C24306F /* Pods-RxSwift_FoursquareAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwift_FoursquareAPI.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwift_FoursquareAPI/Pods-RxSwift_FoursquareAPI.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -121,6 +123,7 @@
 		B21153F92066A76C0010FADA /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				B21154052066CA470010FADA /* VenueViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				B21154012066BD390010FADA /* VenueRequest.swift in Sources */,
 				B21153FF2066BBF60010FADA /* Result.swift in Sources */,
 				B21153F62066A5BB0010FADA /* Venue.swift in Sources */,
+				B21154062066CA470010FADA /* VenueViewModel.swift in Sources */,
 				B21153F42066A47C0010FADA /* Constants.swift in Sources */,
 				B21153FD2066B06F0010FADA /* VenueAPIClient.swift in Sources */,
 			);
