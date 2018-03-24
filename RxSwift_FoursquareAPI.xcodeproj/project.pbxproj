@@ -14,6 +14,9 @@
 		B21153EC20669DA30010FADA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B21153EA20669DA30010FADA /* LaunchScreen.storyboard */; };
 		B21153F42066A47C0010FADA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21153F32066A47C0010FADA /* Constants.swift */; };
 		B21153F62066A5BB0010FADA /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21153F52066A5BB0010FADA /* Venue.swift */; };
+		B21153FD2066B06F0010FADA /* VenueAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21153FC2066B06F0010FADA /* VenueAPIClient.swift */; };
+		B21153FF2066BBF60010FADA /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21153FE2066BBF60010FADA /* Result.swift */; };
+		B21154012066BD390010FADA /* VenueRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21154002066BD390010FADA /* VenueRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		B21153ED20669DA30010FADA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B21153F32066A47C0010FADA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B21153F52066A5BB0010FADA /* Venue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
+		B21153FC2066B06F0010FADA /* VenueAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueAPIClient.swift; sourceTree = "<group>"; };
+		B21153FE2066BBF60010FADA /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		B21154002066BD390010FADA /* VenueRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueRequest.swift; sourceTree = "<group>"; };
 		B61D2F7DECB2EBA76D0DA5EA /* Pods_RxSwift_FoursquareAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwift_FoursquareAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F58039E121081E306C24306F /* Pods-RxSwift_FoursquareAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwift_FoursquareAPI.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwift_FoursquareAPI/Pods-RxSwift_FoursquareAPI.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,6 +90,7 @@
 				B21153F92066A76C0010FADA /* ViewModel */,
 				B21153F72066A5BF0010FADA /* Model */,
 				B21153E120669DA30010FADA /* AppDelegate.swift */,
+				B21153FE2066BBF60010FADA /* Result.swift */,
 				B21153E520669DA30010FADA /* Main.storyboard */,
 				B21153E820669DA30010FADA /* Assets.xcassets */,
 				B21153EA20669DA30010FADA /* LaunchScreen.storyboard */,
@@ -95,8 +102,10 @@
 		B21153F72066A5BF0010FADA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B21154022066C1A10010FADA /* Protocol */,
 				B21153F82066A5CF0010FADA /* API */,
 				B21153F52066A5BB0010FADA /* Venue.swift */,
+				B21153FC2066B06F0010FADA /* VenueAPIClient.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -121,6 +130,14 @@
 			children = (
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		B21154022066C1A10010FADA /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				B21154002066BD390010FADA /* VenueRequest.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,8 +282,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B21153E220669DA30010FADA /* AppDelegate.swift in Sources */,
+				B21154012066BD390010FADA /* VenueRequest.swift in Sources */,
+				B21153FF2066BBF60010FADA /* Result.swift in Sources */,
 				B21153F62066A5BB0010FADA /* Venue.swift in Sources */,
 				B21153F42066A47C0010FADA /* Constants.swift in Sources */,
+				B21153FD2066B06F0010FADA /* VenueAPIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
