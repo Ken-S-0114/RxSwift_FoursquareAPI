@@ -11,7 +11,7 @@ import SwiftyJSON
 import FoursquareAPIClient
 
 final class VenueViewModel {
-  fileprivate var venues = Variable<[Venue]>([])
+  fileprivate(set) var venues = Variable<[Venue]>([])
   
   // ForesquareのAPIクライアントのインスタンス
   let client = VenueAPIClient()
@@ -24,6 +24,7 @@ final class VenueViewModel {
   public func fetch(q: String = "") {
     // APIクライアントのメソッドを実行する
     client.search(query: q)
+      // イベントステータスに応じて処理
       .subscribe { [weak self] result in
         // 結果取得ができた際には、APIクライアントの変数:venuesに結果の値を入れる
         switch result {
