@@ -1,0 +1,35 @@
+PODS:
+  - Differentiator (3.0.2)
+  - FoursquareAPIClient (4.0.1)
+  - RxCocoa (4.1.2):
+    - RxSwift (~> 4.0)
+  - RxDataSources (3.0.2):
+    - Differentiator (~> 3.0)
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
+  - RxSwift (4.1.2)
+  - SDWebImage (4.3.3):
+    - SDWebImage/Core (= 4.3.3)
+  - SDWebImage/Core (4.3.3)
+  - SwiftyJSON (4.0.0)
+
+DEPENDENCIES:
+  - FoursquareAPIClient
+  - RxCocoa
+  - RxDataSources
+  - RxSwift
+  - SDWebImage
+  - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Differentiator: a87be69eba49ec4ab460c7671143ee3a9eececfd
+  FoursquareAPIClient: 12fbe6aa7b11485ee8314c7590458b6baa226f4e
+  RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
+  RxDataSources: cb7c31e652a87ebb919da45f716bbb87b3765f6b
+  RxSwift: e49536837d9901277638493ea537394d4b55f570
+  SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
+
+PODFILE CHECKSUM: df90c2dd35e13028d6e83ee02050dc2e237c0745
+
+COCOAPODS: 1.4.0
