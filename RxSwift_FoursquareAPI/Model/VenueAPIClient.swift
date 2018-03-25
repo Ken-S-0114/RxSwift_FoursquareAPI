@@ -14,8 +14,8 @@ import SwiftyJSON
 import FoursquareAPIClient
 
 // Foresquareのメニュー情報を取得用のクライアント部分(実際のデータ通信部分)
-class VenueAPIClient {
-
+final class VenueAPIClient: VenueRequest {
+  let path: String = ""
   // クエリ文字列を元に検索を行う
   func search(query: String = "") -> Observable<[Venue]> {
     // Observable戻り値に対して
@@ -32,19 +32,19 @@ class VenueAPIClient {
       ]
       
       // クライアントへのアクセス
-      client.request(path: "venues/search", parameter: parameter) {
+      client.request(path: path, parameter: parameter) {
         [weak self] data, error in
         // データの取得と参照に関するチェックをする
         guard let strongSelf = self, let data = data else { return }
-        // APIのJSONを解析する
+        //APIのJSONを解析する
         let json = JSON(data: data)
         let venues = strongSelf.parse(venuesJSON: json["response"]["venues"])
         
-        // パースしてきたjsonの値を通知対象にする
+        //パースしてきたjsonの値を通知対象にする
         observer.on(.next(venues))
         observer.on(.completed)
       }
-      // この取得処理を監視対象からはずすための処理
+      //この取得処理を監視対象からはずすための処理
       return Disposables.create {}
     }
   }

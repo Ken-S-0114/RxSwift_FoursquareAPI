@@ -44,7 +44,6 @@
 		B28736AF2066D94D00ADC25C /* VenueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueCell.swift; sourceTree = "<group>"; };
 		B28736B02066D94D00ADC25C /* VenueCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VenueCell.xib; sourceTree = "<group>"; };
 		B28736B32066DDCD00ADC25C /* VenueDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueDelegate.swift; sourceTree = "<group>"; };
-		B28736B52067F3FA00ADC25C /* RxSwift_FoursquareAPI-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RxSwift_FoursquareAPI-Bridging-Header.h"; sourceTree = "<group>"; };
 		B61D2F7DECB2EBA76D0DA5EA /* Pods_RxSwift_FoursquareAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwift_FoursquareAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F58039E121081E306C24306F /* Pods-RxSwift_FoursquareAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwift_FoursquareAPI.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwift_FoursquareAPI/Pods-RxSwift_FoursquareAPI.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,7 +107,6 @@
 				B21153E820669DA30010FADA /* Assets.xcassets */,
 				B21153EA20669DA30010FADA /* LaunchScreen.storyboard */,
 				B21153ED20669DA30010FADA /* Info.plist */,
-				B28736B52067F3FA00ADC25C /* RxSwift_FoursquareAPI-Bridging-Header.h */,
 			);
 			path = RxSwift_FoursquareAPI;
 			sourceTree = "<group>";
@@ -464,7 +462,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ken.RxSwift-FoursquareAPI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/satoken/Xcodefolder/RxSwift_FoursquareAPI/RxSwift_FoursquareAPI/RxSwift_FoursquareAPI-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -481,7 +478,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "ken.RxSwift-FoursquareAPI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/Users/satoken/Xcodefolder/RxSwift_FoursquareAPI/RxSwift_FoursquareAPI/RxSwift_FoursquareAPI-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

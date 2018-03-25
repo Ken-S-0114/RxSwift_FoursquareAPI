@@ -60,41 +60,6 @@ class VenueSearchViewController: UIViewController {
         self.venueSearchTableView.rx.items(dataSource: self.venueDataSource)
     )
     .disposed(by: disposeBag)
-  
-  // テーブルビューのセルを選択した際の処理
-    venueSearchTableView.rx.itemSelected
-    // テーブルビューのセルを選択した場合にはindexPathを元にセルの情報を取得する
-      .bindNext { [weak self] indexPath in
-        // この値を元に具体的な処理を記載する
-        if let venue = self?.venueViewModel.venues.value[indexPath.row] {
-           // キーボードが表示されていたらキーボードを閉じる
-          if (self?.venueSearchBar.isFirstResponder)! {
-            self?.venueSearchBar.resignFirstResponder()
-          }
-          
-          // Foursquareのページを表示する
-          let urlString = "https://foursquare.com/v/" + venue.venueId
-          if let url = URL(string: urlString) {
-            let safariViewController = SFSafariViewController(url: url)
-            self?.present(safariViewController, animated: true, completion: nil)
-          }
-          
-          // DEBUG: 取得データに関するチェック
-          print("-----------")
-          print(venue.venueId)
-          print(venue.name)
-          print(venue.city ?? "")
-          print(venue.state ?? "")
-          print(venue.address ?? "")
-          print(venue.latitude ?? "")
-          print(venue.longitude ?? "")
-          print(venue.categoryIconURL ?? "")
-          print("-----------")
-          print("")
-          
-        }
-    }
-    .disposed(by: disposeBag)
   }
   
   private func setupUI() {

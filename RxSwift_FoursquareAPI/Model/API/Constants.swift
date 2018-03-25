@@ -7,6 +7,6 @@
 //
 
 enum APIKey: String {
-  case foresquare_clientid = "FM2DGWWLGHJ52MRCVJGTFE3KSRL10YP1JNCDSIYVOU0HWDCX"
-  case foresquare_clientsecret = "EIGUJL1XXLZRYN0G3FVTC11LIQGC5LMLWRVAHRMTEN53ICDE"
+  case foresquare_clientid = "myclientid"
+  case foresquare_clientsecret = "myclientsecret"
 }
