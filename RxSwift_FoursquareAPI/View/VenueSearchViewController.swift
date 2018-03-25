@@ -60,6 +60,8 @@ class VenueSearchViewController: UIViewController {
         self.venueSearchTableView.rx.items(dataSource: self.venueDataSource)
     )
     .disposed(by: disposeBag)
+    
+    
   }
   
   private func setupUI() {
