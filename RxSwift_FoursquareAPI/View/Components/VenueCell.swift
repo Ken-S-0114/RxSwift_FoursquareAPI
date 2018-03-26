@@ -10,6 +10,7 @@ import UIKit
 
 class VenueCell: UITableViewCell {
 
+
   @IBOutlet weak var venueName: UILabel!
   @IBOutlet weak var venueAddress: UILabel!
   @IBOutlet weak var venueState: UILabel!

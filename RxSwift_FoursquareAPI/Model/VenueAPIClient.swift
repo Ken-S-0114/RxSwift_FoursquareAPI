@@ -33,32 +33,32 @@ class VenueAPIClient {
       
       // クライアントへのアクセス
       client.request(path: "venues/search", parameter: parameter) {
-//        [weak self] result in
-//
-//        switch result {
-//          case .success(let data):
-//
-//            //APIのJSONを解析する
-//            let json = try! JSON(data: data)
-//            let venues = self?.parse(venuesJSON: json["response"]["venues"])
-//            
-//            //パースしてきたjsonの値を通知対象にする
-//            observer.on(.next(venues))
-//            observer.on(.completed)
-//          case .failure(let error):
-//            print("Error: \(error)")
-//        }
+        [weak self] result in
+
+        switch result {
+          case .success(let data):
+
+            //APIのJSONを解析する
+            let json = try! JSON(data: data)
+            let venues = self?.parse(venuesJSON: json["response"]["venues"])
+
+            //パースしてきたjsonの値を通知対象にする
+            observer.on(.next(venues!))
+            observer.on(.completed)
+          case .failure(let error):
+            print("Error: \(error)")
+        }
         
-         [weak self] data, error in
-        // データの取得と参照に関するチェックをする
-        guard let strongSelf = self, let data = data else { return }
-        //APIのJSONを解析する
-        let json = JSON(data: data)
-        let venues = strongSelf.parse(venuesJSON: json["response"]["venues"])
-        
-        //パースしてきたjsonの値を通知対象にする
-        observer.on(.next(venues))
-        observer.on(.completed)
+//         [weak self] data, error in
+//        // データの取得と参照に関するチェックをする
+//        guard let strongSelf = self, let data = data else { return }
+//        //APIのJSONを解析する
+//        let json = JSON(data: data)
+//        let venues = strongSelf.parse(venuesJSON: json["response"]["venues"])
+//
+//        //パースしてきたjsonの値を通知対象にする
+//        observer.on(.next(venues))
+//        observer.on(.completed)
       }
       //この取得処理を監視対象からはずすための処理
       return Disposables.create {}
