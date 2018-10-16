@@ -7,7 +7,7 @@
 //
 
 enum APIKey: String {
-  case foresquare_clientid = "foresquare_clientid"
-  case foresquare_clientsecret = "foresquare_clientsecret"
+  case foresquare_clientid = "Myforesquare_clientid"
+  case foresquare_clientsecret = "Myforesquare_clientsecret"
 }
 

@@ -15,7 +15,6 @@ import FoursquareAPIClient
 
 // Foresquareのメニュー情報を取得用のクライアント部分(実際のデータ通信部分)
 class VenueAPIClient {
-  let path: String = ""
   // クエリ文字列を元に検索を行う
   func search(query: String = "") -> Observable<[Venue]> {
     // Observable戻り値に対して

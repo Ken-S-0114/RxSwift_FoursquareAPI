@@ -106,14 +106,14 @@ class VenueSearchViewController: UIViewController {
     NotificationCenter.default.addObserver(
       self,
       selector: #selector(keyboardWillShow(_:)),
-      name: NSNotification.Name.UIKeyboardWillShow,
+      name: UIResponder.keyboardWillShowNotification,
       object: nil)
     
     // Case2. キーボードを閉じた場合のイベント
     NotificationCenter.default.addObserver(
       self,
       selector: #selector(keyboardWillHide(_:)),
-      name: NSNotification.Name.UIKeyboardWillHide,
+      name: UIResponder.keyboardWillHideNotification,
       object: nil)
   }
   
@@ -122,7 +122,7 @@ class VenueSearchViewController: UIViewController {
     
     // キーボードのサイズを取得する
     guard let keyboardFrame =
-      (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else { return }
+      (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else { return }
     
     // 一覧表示用テーブルビューのAutoLayoutの制約を更新して高さをキーボード分だけ縮める
     bottomVenueTableConstraint.constant = keyboardFrame.height

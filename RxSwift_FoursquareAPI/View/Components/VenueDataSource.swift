@@ -58,8 +58,8 @@ class VenueDataSource: NSObject, UITableViewDataSource, RxTableViewDataSourceTyp
     cell.venueDescription.text = venues[indexPath.row].description
     
     //セルのアクセサリタイプの設定
-    cell.accessoryType = UITableViewCellAccessoryType.none
-    cell.selectionStyle = UITableViewCellSelectionStyle.none
+    cell.accessoryType = UITableViewCell.AccessoryType.none
+    cell.selectionStyle = UITableViewCell.SelectionStyle.none
     
     return cell
   }
