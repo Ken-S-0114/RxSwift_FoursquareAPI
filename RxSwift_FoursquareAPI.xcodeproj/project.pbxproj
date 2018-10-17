@@ -1,0 +1,499 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3F4C2DAD4438A7C82E144E26 /* Pods_RxSwift_FoursquareAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B61D2F7DECB2EBA76D0DA5EA /* Pods_RxSwift_FoursquareAPI.framework */; };
+		B21153E220669DA30010FADA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21153E120669DA30010FADA /* AppDelegate.swift */; };
+		B21153E720669DA30010FADA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B21153E520669DA30010FADA /* Main.storyboard */; };
+		B21153E920669DA30010FADA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B21153E820669DA30010FADA /* Assets.xcassets */; };
+		B21153EC20669DA30010FADA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B21153EA20669DA30010FADA /* LaunchScreen.storyboard */; };
+		B21153F42066A47C0010FADA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21153F32066A47C0010FADA /* Constants.swift */; };
+		B21153F62066A5BB0010FADA /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21153F52066A5BB0010FADA /* Venue.swift */; };
+		B21153FD2066B06F0010FADA /* VenueAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21153FC2066B06F0010FADA /* VenueAPIClient.swift */; };
+		B21153FF2066BBF60010FADA /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21153FE2066BBF60010FADA /* Result.swift */; };
+		B21154012066BD390010FADA /* VenueRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21154002066BD390010FADA /* VenueRequest.swift */; };
+		B21154062066CA470010FADA /* VenueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21154052066CA470010FADA /* VenueViewModel.swift */; };
+		B21154082066D1F80010FADA /* VenueSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21154072066D1F80010FADA /* VenueSearchViewController.swift */; };
+		B28736AC2066D5AA00ADC25C /* VenueDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28736AB2066D5AA00ADC25C /* VenueDataSource.swift */; };
+		B28736B12066D94D00ADC25C /* VenueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28736AF2066D94D00ADC25C /* VenueCell.swift */; };
+		B28736B22066D94D00ADC25C /* VenueCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B28736B02066D94D00ADC25C /* VenueCell.xib */; };
+		B28736B42066DDCD00ADC25C /* VenueDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28736B32066DDCD00ADC25C /* VenueDelegate.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3C6D7FAE4F77FA0679A5FC21 /* Pods-RxSwift_FoursquareAPI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwift_FoursquareAPI.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwift_FoursquareAPI/Pods-RxSwift_FoursquareAPI.debug.xcconfig"; sourceTree = "<group>"; };
+		B21153DE20669DA30010FADA /* RxSwift_FoursquareAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSwift_FoursquareAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B21153E120669DA30010FADA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B21153E620669DA30010FADA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B21153E820669DA30010FADA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B21153EB20669DA30010FADA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B21153ED20669DA30010FADA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B21153F32066A47C0010FADA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B21153F52066A5BB0010FADA /* Venue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
+		B21153FC2066B06F0010FADA /* VenueAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueAPIClient.swift; sourceTree = "<group>"; };
+		B21153FE2066BBF60010FADA /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		B21154002066BD390010FADA /* VenueRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueRequest.swift; sourceTree = "<group>"; };
+		B21154052066CA470010FADA /* VenueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueViewModel.swift; sourceTree = "<group>"; };
+		B21154072066D1F80010FADA /* VenueSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueSearchViewController.swift; sourceTree = "<group>"; };
+		B28736AB2066D5AA00ADC25C /* VenueDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueDataSource.swift; sourceTree = "<group>"; };
+		B28736AF2066D94D00ADC25C /* VenueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueCell.swift; sourceTree = "<group>"; };
+		B28736B02066D94D00ADC25C /* VenueCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VenueCell.xib; sourceTree = "<group>"; };
+		B28736B32066DDCD00ADC25C /* VenueDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueDelegate.swift; sourceTree = "<group>"; };
+		B61D2F7DECB2EBA76D0DA5EA /* Pods_RxSwift_FoursquareAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwift_FoursquareAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F58039E121081E306C24306F /* Pods-RxSwift_FoursquareAPI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwift_FoursquareAPI.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxSwift_FoursquareAPI/Pods-RxSwift_FoursquareAPI.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B21153DB20669DA30010FADA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F4C2DAD4438A7C82E144E26 /* Pods_RxSwift_FoursquareAPI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1C08525DE585DE48FE5A3D6E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B61D2F7DECB2EBA76D0DA5EA /* Pods_RxSwift_FoursquareAPI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A136A1BDFA1B1287DDFEBC76 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3C6D7FAE4F77FA0679A5FC21 /* Pods-RxSwift_FoursquareAPI.debug.xcconfig */,
+				F58039E121081E306C24306F /* Pods-RxSwift_FoursquareAPI.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B21153D520669DA30010FADA = {
+			isa = PBXGroup;
+			children = (
+				B21153E020669DA30010FADA /* RxSwift_FoursquareAPI */,
+				B21153DF20669DA30010FADA /* Products */,
+				A136A1BDFA1B1287DDFEBC76 /* Pods */,
+				1C08525DE585DE48FE5A3D6E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B21153DF20669DA30010FADA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B21153DE20669DA30010FADA /* RxSwift_FoursquareAPI.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B21153E020669DA30010FADA /* RxSwift_FoursquareAPI */ = {
+			isa = PBXGroup;
+			children = (
+				B21153FB2066A77A0010FADA /* View */,
+				B21153F92066A76C0010FADA /* ViewModel */,
+				B21153F72066A5BF0010FADA /* Model */,
+				B21153E120669DA30010FADA /* AppDelegate.swift */,
+				B21153FE2066BBF60010FADA /* Result.swift */,
+				B21153E520669DA30010FADA /* Main.storyboard */,
+				B21153E820669DA30010FADA /* Assets.xcassets */,
+				B21153EA20669DA30010FADA /* LaunchScreen.storyboard */,
+				B21153ED20669DA30010FADA /* Info.plist */,
+			);
+			path = RxSwift_FoursquareAPI;
+			sourceTree = "<group>";
+		};
+		B21153F72066A5BF0010FADA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B21154022066C1A10010FADA /* Protocol */,
+				B21153F82066A5CF0010FADA /* API */,
+				B21153F52066A5BB0010FADA /* Venue.swift */,
+				B21153FC2066B06F0010FADA /* VenueAPIClient.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B21153F82066A5CF0010FADA /* API */ = {
+			isa = PBXGroup;
+			children = (
+				B21153F32066A47C0010FADA /* Constants.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		B21153F92066A76C0010FADA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B21154052066CA470010FADA /* VenueViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B21153FB2066A77A0010FADA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B28736AA2066D59200ADC25C /* Components */,
+				B21154072066D1F80010FADA /* VenueSearchViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B21154022066C1A10010FADA /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				B21154002066BD390010FADA /* VenueRequest.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		B28736AA2066D59200ADC25C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B28736AB2066D5AA00ADC25C /* VenueDataSource.swift */,
+				B28736AF2066D94D00ADC25C /* VenueCell.swift */,
+				B28736B02066D94D00ADC25C /* VenueCell.xib */,
+				B28736B32066DDCD00ADC25C /* VenueDelegate.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B21153DD20669DA30010FADA /* RxSwift_FoursquareAPI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B21153F020669DA30010FADA /* Build configuration list for PBXNativeTarget "RxSwift_FoursquareAPI" */;
+			buildPhases = (
+				BA19DF63E19D64D2D5CCA4C2 /* [CP] Check Pods Manifest.lock */,
+				B21153DA20669DA30010FADA /* Sources */,
+				B21153DB20669DA30010FADA /* Frameworks */,
+				B21153DC20669DA30010FADA /* Resources */,
+				890C9633242F834E895E31B2 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RxSwift_FoursquareAPI;
+			productName = RxSwift_FoursquareAPI;
+			productReference = B21153DE20669DA30010FADA /* RxSwift_FoursquareAPI.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B21153D620669DA30010FADA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "佐藤賢";
+				TargetAttributes = {
+					B21153DD20669DA30010FADA = {
+						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1000;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = B21153D920669DA30010FADA /* Build configuration list for PBXProject "RxSwift_FoursquareAPI" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B21153D520669DA30010FADA;
+			productRefGroup = B21153DF20669DA30010FADA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B21153DD20669DA30010FADA /* RxSwift_FoursquareAPI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B21153DC20669DA30010FADA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B21153EC20669DA30010FADA /* LaunchScreen.storyboard in Resources */,
+				B28736B22066D94D00ADC25C /* VenueCell.xib in Resources */,
+				B21153E920669DA30010FADA /* Assets.xcassets in Resources */,
+				B21153E720669DA30010FADA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		890C9633242F834E895E31B2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RxSwift_FoursquareAPI/Pods-RxSwift_FoursquareAPI-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
+				"${BUILT_PRODUCTS_DIR}/FoursquareAPIClient/FoursquareAPIClient.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FoursquareAPIClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxSwift_FoursquareAPI/Pods-RxSwift_FoursquareAPI-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA19DF63E19D64D2D5CCA4C2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RxSwift_FoursquareAPI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B21153DA20669DA30010FADA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B21153E220669DA30010FADA /* AppDelegate.swift in Sources */,
+				B28736B12066D94D00ADC25C /* VenueCell.swift in Sources */,
+				B21154012066BD390010FADA /* VenueRequest.swift in Sources */,
+				B21154082066D1F80010FADA /* VenueSearchViewController.swift in Sources */,
+				B21153FF2066BBF60010FADA /* Result.swift in Sources */,
+				B28736AC2066D5AA00ADC25C /* VenueDataSource.swift in Sources */,
+				B21153F62066A5BB0010FADA /* Venue.swift in Sources */,
+				B21154062066CA470010FADA /* VenueViewModel.swift in Sources */,
+				B21153F42066A47C0010FADA /* Constants.swift in Sources */,
+				B21153FD2066B06F0010FADA /* VenueAPIClient.swift in Sources */,
+				B28736B42066DDCD00ADC25C /* VenueDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B21153E520669DA30010FADA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B21153E620669DA30010FADA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B21153EA20669DA30010FADA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B21153EB20669DA30010FADA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B21153EE20669DA30010FADA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B21153EF20669DA30010FADA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B21153F120669DA30010FADA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C6D7FAE4F77FA0679A5FC21 /* Pods-RxSwift_FoursquareAPI.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JL94BNBL3S;
+				INFOPLIST_FILE = RxSwift_FoursquareAPI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ken.RxSwift-FoursquareAPI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B21153F220669DA30010FADA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F58039E121081E306C24306F /* Pods-RxSwift_FoursquareAPI.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JL94BNBL3S;
+				INFOPLIST_FILE = RxSwift_FoursquareAPI/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "ken.RxSwift-FoursquareAPI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B21153D920669DA30010FADA /* Build configuration list for PBXProject "RxSwift_FoursquareAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B21153EE20669DA30010FADA /* Debug */,
+				B21153EF20669DA30010FADA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B21153F020669DA30010FADA /* Build configuration list for PBXNativeTarget "RxSwift_FoursquareAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B21153F120669DA30010FADA /* Debug */,
+				B21153F220669DA30010FADA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B21153D620669DA30010FADA /* Project object */;
+}
