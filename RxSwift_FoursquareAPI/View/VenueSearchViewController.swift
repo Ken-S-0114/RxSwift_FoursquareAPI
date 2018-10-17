@@ -12,142 +12,123 @@ import RxCocoa
 import SafariServices
 
 class VenueSearchViewController: UIViewController {
-  
-  @IBOutlet weak var venueSearchBar: UISearchBar!
-  @IBOutlet weak var venueSearchTableView: UITableView!
-  @IBOutlet weak var bottomVenueTableConstraint: NSLayoutConstraint!
-  
-  // ViewModel・デリゲート・データソースのインスタンスを設定
-  let venueViewModel = VenueViewModel()
-  var venueDataSource = VenueDataSource()
-  var venueDelegate = VenueDelegate()
-  
-  // 観測対象のオブジェクトの一括解放用
-  let disposeBag = DisposeBag()
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    
-    //RxSwiftでの処理に関する部分をまとめたメソッドを実行
-    setupRx()
-    
-    //RxSwiftを使用しない処理に関する部分をまとめたメソッド実行
-    setupUI()
-  }
-  
-  private func setupRx() {
-    // 配置したテーブルビューにデリゲートの適用をする
-    venueSearchTableView.delegate = self.venueDelegate
-    
-    // Xibのクラスを読み込む宣言を行う
-    let nibTableView = UINib(nibName: "VenueCell", bundle: nil)
-    venueSearchTableView.register(nibTableView, forCellReuseIdentifier: "VenueCell")
-    
-    // 検索バーの変化から0.5秒後に.driveメソッド内の処理を実行する
-    venueSearchBar.rx.text.asDriver()
-    .throttle(0.5)
-      .drive(onNext: { query in
-        // ViewModelに定義したfetchメソッドを実行
-        self.venueViewModel.fetch(q: query!)
-      })
-    .disposed(by: disposeBag)
-    
-    // データの取得ができたらテーブルビューのデータソースの定義に則って表示する値を設定する
-    venueViewModel
-      .venues
-      .asDriver()
-      .drive(
-        self.venueSearchTableView.rx.items(dataSource: self.venueDataSource)
-    )
-    .disposed(by: disposeBag)
-    
-    // テーブルビューのセルを選択した際の処理
-    venueSearchTableView.rx.itemSelected
-      
-      // テーブルビューのセルを選択した場合にはindexPathを元にセルの情報を取得する
-      .bindNext { [weak self] indexPath in
-        
-        // この値を元に具体的な処理を記載する
-        if let venue = self?.venueViewModel.venues.value[indexPath.row] {
-          
-          // キーボードが表示されていたらキーボードを閉じる
-          if (self?.venueSearchBar.isFirstResponder)! {
-            self?.venueSearchBar.resignFirstResponder()
-          }
-          
-          // Foursquareのページを表示する
-          let urlString = "https://foursquare.com/v/" + venue.venueId
-          if let url = URL(string: urlString) {
-            let safariViewController = SFSafariViewController(url: url)
-            self?.present(safariViewController, animated: true, completion: nil)
-          }
-          
-          // DEBUG: 取得データに関するチェック
-          print("-----------")
-          print(venue.venueId)
-          print(venue.name)
-          print(venue.city ?? "")
-          print(venue.state ?? "")
-          print(venue.address ?? "")
-          print(venue.latitude ?? "")
-          print(venue.longitude ?? "")
-          print(venue.categoryIconURL ?? "")
-          print("-----------")
-          print("")
-          
-        }
-      }
-      .disposed(by: disposeBag)
-  }
-  
-  private func setupUI() {
-    // キーボードのイベントを監視対象にする
-    // Case1. キーボードを開いた場合のイベント
-    NotificationCenter.default.addObserver(
-      self,
-      selector: #selector(keyboardWillShow(_:)),
-      name: UIResponder.keyboardWillShowNotification,
-      object: nil)
-    
-    // Case2. キーボードを閉じた場合のイベント
-    NotificationCenter.default.addObserver(
-      self,
-      selector: #selector(keyboardWillHide(_:)),
-      name: UIResponder.keyboardWillHideNotification,
-      object: nil)
-  }
-  
-  // キーボード表示時に発動されるメソッド
-  @objc private func keyboardWillShow(_ notification: Notification) {
-    
-    // キーボードのサイズを取得する
-    guard let keyboardFrame =
-      (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else { return }
-    
-    // 一覧表示用テーブルビューのAutoLayoutの制約を更新して高さをキーボード分だけ縮める
-    bottomVenueTableConstraint.constant = keyboardFrame.height
-    UIView.animate(withDuration: 0.3, animations: {
-      self.view.updateConstraints()
-    })
-  }
-  
-  //キーボード非表示時に発動されるメソッド
-  @objc private func keyboardWillHide(_ notification: Notification) {
-    
-    //一覧表示用テーブルビューのAutoLayoutの制約を更新して高さを元に戻す
-    bottomVenueTableConstraint.constant = 0.0
-    UIView.animate(withDuration: 0.3, animations: {
-      self.view.updateConstraints()
-    })
-  }
-  
-  //メモリ解放時にキーボードのイベント監視対象から除外する
-  deinit {
-    NotificationCenter.default.removeObserver(self)
-  }
-  
-  
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-  }
+
+    @IBOutlet weak var venueSearchBar: UISearchBar!
+    @IBOutlet weak var venueSearchTableView: UITableView!
+    @IBOutlet weak var bottomVenueTableConstraint: NSLayoutConstraint!
+
+    // ViewModel・デリゲート・データソースのインスタンスを設定
+    private let venueViewModel = VenueViewModel()
+    private var venueDataSource = VenueDataSource()
+    private var venueDelegate = VenueDelegate()
+
+    // 観測対象のオブジェクトの一括解放用
+    let disposeBag = DisposeBag()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        //RxSwiftでの処理に関する部分をまとめたメソッドを実行
+        setupRx()
+
+        //RxSwiftを使用しない処理に関する部分をまとめたメソッド実行
+        setupUI()
+    }
+
+    private func setupRx() {
+        // 配置したテーブルビューにデリゲートの適用をする
+        venueSearchTableView.delegate = self.venueDelegate
+        // Xibのクラスを読み込む宣言を行う
+        let nibTableView = UINib(nibName: "VenueCell", bundle: nil)
+        venueSearchTableView.register(nibTableView, forCellReuseIdentifier: "VenueCell")
+
+        // 検索バーの変化から0.5秒後に.driveメソッド内の処理を実行する
+        venueSearchBar.rx.text.asDriver()
+            .throttle(0.5)
+            .drive(onNext: { query in
+                // ViewModelに定義したfetchメソッドを実行
+                self.venueViewModel.fetch(q: query!)
+            })
+            .disposed(by: disposeBag)
+
+        // データの取得ができたらテーブルビューのデータソースの定義に則って表示する値を設定する
+        venueViewModel
+            .venues
+            .asDriver()
+            .drive(self.venueSearchTableView.rx.items(dataSource: self.venueDataSource))
+            .disposed(by: disposeBag)
+
+        // テーブルビューのセルを選択した際の処理
+        venueSearchTableView
+            .rx.itemSelected
+            // テーブルビューのセルを選択した場合にはindexPathを元にセルの情報を取得する
+            .bind { [weak self] indexPath in
+                //                guard let me = self else { return }
+                if let venue = self?.venueViewModel.venues.value[indexPath.row] {
+                    // キーボードが表示されていたらキーボードを閉じる
+                    if (self?.venueSearchBar.isFirstResponder)! {
+                        self?.venueSearchBar.resignFirstResponder()
+                    }
+                    // Foursquareのページを表示する
+                    let urlString = "https://foursquare.com/v/" + venue.venueId
+                    if let url = URL(string: urlString) {
+                        let safariViewController = SFSafariViewController(url: url)
+                        self?.present(safariViewController, animated: true, completion: nil)
+                    }
+                }
+            }
+            .disposed(by: disposeBag)
+    }
+
+
+    private func setupUI() {
+        // キーボードのイベントを監視対象にする
+        // Case1. キーボードを開いた場合のイベント
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(keyboardWillShow(_:)),
+            name: UIResponder.keyboardWillShowNotification,
+            object: nil)
+
+        // Case2. キーボードを閉じた場合のイベント
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(keyboardWillHide(_:)),
+            name: UIResponder.keyboardWillHideNotification,
+            object: nil)
+    }
+
+    // キーボード表示時に発動されるメソッド
+    @objc private func keyboardWillShow(_ notification: Notification) {
+
+        // キーボードのサイズを取得する
+        guard let keyboardFrame =
+            (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else { return }
+
+        // 一覧表示用テーブルビューのAutoLayoutの制約を更新して高さをキーボード分だけ縮める
+        bottomVenueTableConstraint.constant = keyboardFrame.height
+        UIView.animate(withDuration: 0.3, animations: {
+            self.view.updateConstraints()
+        })
+    }
+
+    //キーボード非表示時に発動されるメソッド
+    @objc private func keyboardWillHide(_ notification: Notification) {
+
+        //一覧表示用テーブルビューのAutoLayoutの制約を更新して高さを元に戻す
+        bottomVenueTableConstraint.constant = 0.0
+        UIView.animate(withDuration: 0.3, animations: {
+            self.view.updateConstraints()
+        })
+    }
+
+    //メモリ解放時にキーボードのイベント監視対象から除外する
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
 }
