@@ -1,6 +1,0 @@
-framework module Pods_RxSwift_FoursquareAPI {
-  umbrella header "Pods-RxSwift_FoursquareAPI-umbrella.h"
-
-  export *
-  module * { export * }
-}
